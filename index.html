@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="INK SHARP is a tattoo studio creating custom realism, traditional and fine line tattoos. Meet the artists, see our works and schedule an appointment.">
+  <meta name="keywords" content="tattoo studio, custom tattoo, realism, traditional, fine line, tattoo appointment">
+  <meta name="author" content="INK SHARP Team">
+  <meta name="theme-color" content="#000000">
+  <title>INK SHARP — Custom Realism, Traditional &amp; Fine Line Tattoos</title>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <a href="#top" class="logo" title="INK SHARP — back to top"><span>INK</span><span>SHARP</span></a>
+
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">☰</button>
+
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#about" title="About the studio">About</a></li>
+        <li><a href="#artists" title="Meet the artists">Artists</a></li>
+        <li><a href="#works" title="See our works">Works</a></li>
+        <li><a href="#aftercare" title="Tattoo aftercare">Aftercare</a></li>
+        <li><a href="#faqs" title="Frequently asked questions">FAQs</a></li>
+        <li><a href="#contact" title="Contact us">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" class="btn btn-outline btn-small" data-open-quote>Schedule an Appointment</button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-label="Welcome">
+      <div class="hero-slides" aria-hidden="true">
+        <img class="hero-slide active" src="assets/img/hero-traditional.jpg" alt="" width="896" height="1195">
+        <img class="hero-slide" src="assets/img/hero-realism.jpg" alt="" width="896" height="1195" loading="lazy">
+        <img class="hero-slide" src="assets/img/hero-fineline.jpg" alt="" width="736" height="1308" loading="lazy">
+      </div>
+      <div class="hero-content">
+        <h1 title="INK SHARP Tattoo Studio">INK SHARP <span>Tattoo Studio</span></h1>
+        <p>Welcome to our studio, where we specialize in creating custom realism, traditional, and fine line tattoos.</p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-outline">About Us</a>
+          <a href="#artists" class="btn btn-outline">Our Artists</a>
+          <button type="button" class="btn btn-solid" data-open-quote>Schedule an Appointment</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 class="section-title">This is INK SHARP.</h2>
+      <div class="features">
+        <article>
+          <h3>Original Custom<br>Designs</h3>
+          <p>No two clients are the same, so no two tattoos should be either. Every design is drawn from scratch around your idea, your body and your story, then finished in the artist's own style.</p>
+        </article>
+        <article>
+          <h3>The Art of<br>Storytelling</h3>
+          <p>A tattoo carries a meaning long after the session ends. We take the time to listen so the piece you wear says exactly what you want it to say.</p>
+        </article>
+        <article>
+          <h3>Skilled<br>Artists</h3>
+          <p>Our artists each bring a distinct style and a steady hand. Clean lines, smooth shading and careful detail are the standard on every piece we do.</p>
+        </article>
+        <article>
+          <h3>A Clean, Comfortable<br>Experience</h3>
+          <p>From the first message to the last aftercare tip, we want you to feel looked after. Sterile equipment, a calm space and clear communication come first.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ARTISTS -->
+    <section class="section section-alt" id="artists">
+      <h2 class="section-title">Our Artists</h2>
+      <div class="artists">
+        <article class="artist">
+          <img src="assets/img/profile-lorman.jpg" alt="Portrait of Lorman" width="720" height="720" loading="lazy">
+          <h3><button type="button" class="artist-toggle" aria-expanded="false" aria-controls="info-lorman">Lorman</button></h3>
+          <div class="artist-info" id="info-lorman">
+            <div>
+              <p class="specialty">Realism &amp; Black and Grey</p>
+              <p>A master of contrast and depth. Lorman turns photo references into smooth, photo-real portraits and wildlife pieces that stay sharp for years.</p>
+            </div>
+          </div>
+        </article>
+        <article class="artist">
+          <img src="assets/img/profile-diether.jpg" alt="Portrait of Diether" width="720" height="720" loading="lazy">
+          <h3><button type="button" class="artist-toggle" aria-expanded="false" aria-controls="info-diether">Diether</button></h3>
+          <div class="artist-info" id="info-diether">
+            <div>
+              <p class="specialty">Traditional &amp; Bold Linework</p>
+              <p>Diether brings classic tattoo tradition into the modern era with heavy outlines and rich saturation, built for maximum longevity.</p>
+            </div>
+          </div>
+        </article>
+        <article class="artist">
+          <img src="assets/img/profile-john.jpg" alt="Portrait of John" width="720" height="720" loading="lazy">
+          <h3><button type="button" class="artist-toggle" aria-expanded="false" aria-controls="info-john">John</button></h3>
+          <div class="artist-info" id="info-john">
+            <div>
+              <p class="specialty">Fine Line &amp; Botanical</p>
+              <p>Delicate precision and organic elegance. John works in single-needle fine lines, botanical illustration and subtle geometric concepts.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- OUR WORKS -->
+    <section class="section" id="works">
+      <h2 class="section-title">Our Works</h2>
+      <ul class="works-grid">
+        <li><button type="button" class="work" data-caption="Hope — Realism by Lorman"><img src="assets/img/realism-1.jpg" alt="Realism forearm tattoo by Lorman: a child with clown tears holding a spray can, the word Hope and a city skyline" width="720" height="960" loading="lazy"><span>Hope<small>Realism · Lorman</small></span></button></li>
+        <li><button type="button" class="work" data-caption="Scorpion — Realism by Lorman"><img src="assets/img/realism-2.jpg" alt="Black-and-grey realism scorpion tattoo on the thigh" width="720" height="960" loading="lazy"><span>Scorpion<small>Realism · Lorman</small></span></button></li>
+        <li><button type="button" class="work" data-caption="Autumn Leaf — Color Realism by Lorman"><img src="assets/img/realism-3.jpg" alt="Tattoo of an autumn maple leaf" width="720" height="960" loading="lazy"><span>Autumn Leaf<small>Color · Lorman</small></span></button></li>
+        <li><button type="button" class="work" data-caption="Koi &amp; Katana — Black &amp; Grey by Diether"><img src="assets/img/traditional-1.jpg" alt="Forearm tattoo of koi fish circling a katana sword" width="720" height="960" loading="lazy"><span>Koi &amp; Katana<small>Black &amp; Grey · Diether</small></span></button></li>
+        <li><button type="button" class="work" data-caption="Moth &amp; Cherries — Traditional by Diether"><img src="assets/img/traditional-2.jpg" alt="Traditional forearm tattoos: a death-head moth and two 8-ball cherries" width="720" height="1558" loading="lazy"><span>Moth &amp; Cherries<small>Traditional · Diether</small></span></button></li>
+        <li><button type="button" class="work" data-caption="Rose &amp; Thorns — Traditional by Diether"><img src="assets/img/traditional-3.jpg" alt="Traditional black rose with thorns and a bud on the thigh" width="720" height="960" loading="lazy"><span>Rose &amp; Thorns<small>Traditional · Diether</small></span></button></li>
+        <li><button type="button" class="work" data-caption="Sun &amp; Moon — Fine Line by John"><img src="assets/img/fineline-3.jpg" alt="Fine line upper-arm tattoo of a sun with rays above a crescent moon and stars" width="720" height="1280" loading="lazy"><span>Sun &amp; Moon<small>Fine Line · John</small></span></button></li>
+        <li><button type="button" class="work" data-caption="Starburst — Fine Line by John"><img src="assets/img/fineline-2.jpg" alt="Fine line starburst and stars on the lower leg" width="720" height="1219" loading="lazy"><span>Starburst<small>Fine Line · John</small></span></button></li>
+        <li><button type="button" class="work" data-caption="Dragonfly — Fine Line by John"><img src="assets/img/fineline-1.jpg" alt="Fine line dragonfly with radiating dotted lines and a star" width="720" height="900" loading="lazy"><span>Dragonfly<small>Fine Line · John</small></span></button></li>
+      </ul>
+      <p class="center-note">Press any photo to zoom. See more on <a href="https://www.instagram.com/ink_sharp_?exln=amYwMzRocTRlYjln" target="_blank" rel="noopener noreferrer" title="Opens Instagram in a new tab">Instagram</a>.</p>
+    </section>
+
+    <!-- MISSION -->
+    <section class="section section-alt mission" id="mission">
+      <h2 class="section-title">Our Mission</h2>
+      <div>
+        <p>We are driven by a steady pursuit of craft. Our promise is to make custom tattoos that are original, detailed and meaningful, and to treat every client with care from the first sketch to the final healed result.</p>
+        <a href="#studio" class="btn btn-outline">Learn More</a>
+      </div>
+    </section>
+
+    <!-- THE STUDIO -->
+    <section class="section" id="studio">
+      <h2 class="section-title">The Studio</h2>
+      <div class="studio-tiles">
+        <article><h3>Sterile &amp; Licensed</h3><p>Single-use needles, hospital-grade sterilization and a health-permit certified space.</p></article>
+        <article><h3>Calm &amp; Minimal</h3><p>A quiet, uncluttered studio built so you can relax while the artist focuses.</p></article>
+        <article><h3>Aftercare Support</h3><p>Message us any time during healing. We will help you keep the tattoo looking its best.</p></article>
+      </div>
+    </section>
+
+    <!-- CLIENT REVIEWS -->
+    <section class="section section-alt" id="reviews">
+      <h2 class="section-title">From Our Clients</h2>
+      <div class="reviews">
+        <blockquote>
+          <p>"Lorman is an absolute master of realism! I gave him a rough photo reference and he turned it into a breathtaking piece with insane depth. The studio is super clean and professional."</p>
+          <footer><strong>Marcus V.</strong> Client Review</footer>
+        </blockquote>
+        <blockquote>
+          <p>"Got my first fine-line botanical piece from John and couldn't be happier. The lines are razor sharp and healed perfectly. He took time to make sure the placement was exact."</p>
+          <footer><strong>Elena R.</strong> Client Review</footer>
+        </blockquote>
+        <blockquote>
+          <p>"I was nervous about my very first tattoo, but the team made me comfortable from start to finish. They explained the whole process and the aftercare was super clear."</p>
+          <footer><strong>Sophia C.</strong> Client Review</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- AFTERCARE -->
+    <section class="section" id="aftercare">
+      <h2 class="section-title">Aftercare</h2>
+      <ol class="steps">
+        <li><h3>Keep it covered</h3><p>Leave the wrap your artist applied on for as long as they advise, then remove it gently.</p></li>
+        <li><h3>Wash gently</h3><p>Use lukewarm water and a mild, fragrance-free soap. Pat dry with a clean paper towel. Never rub.</p></li>
+        <li><h3>Moisturize lightly</h3><p>Apply a thin layer of the ointment or lotion your artist recommends. The skin should not feel suffocated.</p></li>
+        <li><h3>Hands off</h3><p>Do not pick or scratch peeling skin. Avoid soaking, pools, the sea and direct sun until fully healed.</p></li>
+        <li><h3>Ask us</h3><p>Redness or swelling that keeps getting worse needs medical attention. For anything else, message us.</p></li>
+      </ol>
+    </section>
+
+    <!-- FAQS -->
+    <section class="section section-alt" id="faqs">
+      <h2 class="section-title">FAQs</h2>
+      <div class="faq-tabs" role="tablist" aria-label="FAQ categories">
+        <button type="button" role="tab" id="tab-general" aria-controls="panel-general" aria-selected="true">General</button>
+        <button type="button" role="tab" id="tab-rates" aria-controls="panel-rates" aria-selected="false">Appointments &amp; Rates</button>
+        <button type="button" role="tab" id="tab-procedure" aria-controls="panel-procedure" aria-selected="false">Tattoo Procedure</button>
+        <button type="button" role="tab" id="tab-design" aria-controls="panel-design" aria-selected="false">Design-Related</button>
+        <button type="button" role="tab" id="tab-healing" aria-controls="panel-healing" aria-selected="false">Aftercare &amp; Healing</button>
+      </div>
+
+      <div class="faq-panel" id="panel-general" role="tabpanel" aria-labelledby="tab-general">
+        <details open><summary>Where are you located?</summary><p>Our full address, hours and contact details are in the Contact section at the bottom of this page.</p></details>
+        <details><summary>Do you accept walk-ins?</summary><p>We recommend booking first so your preferred artist and time are secured. Walk-ins are only possible when an artist has an open slot.</p></details>
+      </div>
+      <div class="faq-panel" id="panel-rates" role="tabpanel" aria-labelledby="tab-rates" hidden>
+        <details open><summary>How do I book an appointment?</summary><p>Press Schedule an Appointment and tell us your idea, size, placement, preferred artist and date. We will reply to confirm your slot.</p></details>
+        <details><summary>How much does a tattoo cost?</summary><p>Price depends on size, detail, placement and whether the piece has color. We give you a quote after we review your idea.</p></details>
+      </div>
+      <div class="faq-panel" id="panel-procedure" role="tabpanel" aria-labelledby="tab-procedure" hidden>
+        <details open><summary>How long does a session take?</summary><p>Small pieces can take an hour or two. Large or highly detailed work may be split across several sessions.</p></details>
+        <details><summary>How should I prepare?</summary><p>Eat beforehand, drink water, get enough sleep, wear comfortable clothes and avoid alcohol for 24 hours before your session.</p></details>
+      </div>
+      <div class="faq-panel" id="panel-design" role="tabpanel" aria-labelledby="tab-design" hidden>
+        <details open><summary>Can I bring my own reference?</summary><p>Yes. Your artist will turn it into an original design and adjust it to fit your body.</p></details>
+        <details><summary>Do you do cover-ups?</summary><p>Yes, after a consultation to look at the existing tattoo. Some designs need to be larger or darker to cover well.</p></details>
+      </div>
+      <div class="faq-panel" id="panel-healing" role="tabpanel" aria-labelledby="tab-healing" hidden>
+        <details open><summary>How long does healing take?</summary><p>The surface usually heals in two to four weeks. The skin keeps settling for a couple of months after that.</p></details>
+        <details><summary>When can I swim or sunbathe?</summary><p>Wait until the tattoo is fully healed. After that, sunscreen keeps the ink looking fresh.</p></details>
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <address>
+          <p>Studio Address Line 1<br>City, Philippines</p>
+          <p><a href="mailto:hello@inksharp.example">hello@inksharp.example</a></p>
+          <p><a href="tel:+639000000000">(+63) 900 000 0000</a></p>
+          <p>Mon – Thu: 11:00 AM – 8:00 PM<br>Fri – Sat: 11:00 AM – 10:00 PM<br>Sun: 12:00 PM – 6:00 PM</p>
+          <button type="button" class="btn btn-outline" data-open-quote>Schedule an Appointment</button>
+        </address>
+
+        <form class="newsletter" id="newsletterForm" name="newsletterForm" action="#" method="post" novalidate>
+          <h3>Be in the Know</h3>
+          <p>Subscribe to our newsletter for news and updates from the studio.</p>
+          <label for="newsletterEmail">Email</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="name@email.com" autocomplete="email" maxlength="60" required>
+          <button type="submit" class="btn btn-solid">Submit</button>
+          <p class="form-message" id="newsletterMessage" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-cols">
+      <div>
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#artists">Artists</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#aftercare">Aftercare</a></li>
+          <li><a href="#faqs">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow us on</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/ink_sharp_?exln=amYwMzRocTRlYjln" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61596155020380" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2026 INK SHARP Tattoo Studio.</p>
+  </footer>
+
+  <!-- MOBILE: fixed appointment bar (shown on phones only) -->
+  <div class="mobile-cta">
+    <button type="button" class="btn btn-solid" data-open-quote>Schedule an Appointment</button>
+  </div>
+
+  <!-- SCHEDULE AN APPOINTMENT DIALOG -->
+  <dialog class="dialog" id="quoteDialog" aria-labelledby="quoteTitle">
+    <h2 id="quoteTitle">Schedule an Appointment</h2>
+    <form id="bookingForm" name="bookingForm" action="#" method="post" autocomplete="on">
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="fullName" placeholder="Your name" minlength="2" maxlength="60" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="contact-input">Phone or email</label>
+        <input type="text" id="contact-input" name="contact" placeholder="Phone or email" maxlength="60" required>
+      </div>
+      <div class="field">
+        <label for="tattoo-type">Tattoo Type</label>
+        <select id="tattoo-type" name="tattooType" aria-describedby="price-note" required>
+          <optgroup label="Shop minimum: Small Piece / Minimalist (1-3 inches)">
+            <option value="Small - Black and Gray">Black and Gray</option>
+            <option value="Small - Colored">Colored</option>
+          </optgroup>
+          <optgroup label="Medium piece">
+            <option value="Medium - Black and Gray Simple Design">Black and Gray Simple Design</option>
+            <option value="Medium - Simple Colored Simple Design">Simple Colored Simple Design</option>
+            <option value="Medium - Black and Gray Advanced Design">Black and Gray Advanced Design</option>
+            <option value="Medium - Colored Advanced Design">Colored Advanced Design</option>
+          </optgroup>
+          <option value="Large Piece">Large Piece</option>
+        </select>
+        <p class="field-note" id="price-note">Note: Prices may change depends on the requested/chosen designs</p>
+      </div>
+      <div class="field">
+        <label for="idea">Idea description</label>
+        <textarea id="idea" name="ideaDescription" placeholder="Describe your placement, size and idea..." maxlength="500"></textarea>
+      </div>
+      <div class="field">
+        <label for="artist">Preferred artist</label>
+        <select id="artist" name="preferredArtist" required>
+          <option value="Diether">Diether</option>
+          <option value="Lorman">Lorman</option>
+          <option value="John">John</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="date">Preferred date</label>
+        <input type="date" id="date" name="preferredDate" required>
+      </div>
+      <div class="dialog-actions">
+        <button type="submit" class="btn btn-solid">Request Appointment</button>
+        <button type="button" class="btn btn-outline" id="quoteCancel">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- PHOTO VIEWER (zoom) -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button type="button" class="lb-close" id="lbClose" aria-label="Close photo">✕</button>
+    <button type="button" class="lb-nav" id="lbPrev" aria-label="Previous photo">‹</button>
+    <figure>
+      <img id="lbImage" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button type="button" class="lb-nav" id="lbNext" aria-label="Next photo">›</button>
+  </dialog>
+
+</body>
+</html>
