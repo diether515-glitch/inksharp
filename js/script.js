@@ -1,4 +1,6 @@
 /* INK SHARP - external JavaScript (linked in <head> with "defer")
+   Shared by every page (Home, About, Services, Gallery, Contact).
+   Each feature only runs when its elements exist on the current page.
    Topics applied: let/const, string methods, functions, DOM selectors,
    events with addEventListener, dialogs, and form validation. */
 
@@ -44,7 +46,9 @@ function nextHeroSlide() {
   heroSlides[currentSlide].classList.add("active");
 }
 
-setInterval(nextHeroSlide, SLIDE_INTERVAL);
+if (heroSlides.length > 1) {
+  setInterval(nextHeroSlide, SLIDE_INTERVAL);
+}
 
 
 /* ---------- 3. FAQ tabs ---------- */
@@ -69,10 +73,18 @@ faqTabs.forEach(function (tab) {
 
 /* ---------- 4. Photo viewer (lightbox) ---------- */
 const lightbox = document.getElementById("lightbox");
+const workList = Array.from(document.getElementsByClassName("work"));
 const lbImage = document.getElementById("lbImage");
 const lbCaption = document.getElementById("lbCaption");
-const workButtons = Array.from(document.getElementsByClassName("work"));
+let workButtons = workList;
 let currentWork = 0;
+
+// only photos that are currently visible (gallery filter) are part of the slideshow
+function visibleWorks() {
+  return workList.filter(function (button) {
+    return !button.closest("li").hidden;
+  });
+}
 
 function showWork(index) {
   // wrap around at both ends
@@ -85,9 +97,10 @@ function showWork(index) {
   lbCaption.textContent = button.dataset.caption;
 }
 
-workButtons.forEach(function (button, index) {
+workList.forEach(function (button) {
   button.addEventListener("click", function () {
-    showWork(index);
+    workButtons = visibleWorks();
+    showWork(workButtons.indexOf(button));
     lightbox.showModal();
   });
 });
@@ -240,12 +253,12 @@ bookingForm.addEventListener("submit", function (event) {
 });
 
 
-/* ---------- 6. Newsletter ---------- */
+/* ---------- 6. Newsletter (Contact page) ---------- */
 const newsletterForm = document.getElementById("newsletterForm");
 const newsletterEmail = document.getElementById("newsletterEmail");
 const newsletterMessage = document.getElementById("newsletterMessage");
 
-newsletterForm.addEventListener("submit", function (event) {
+if (newsletterForm) newsletterForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const email = newsletterEmail.value.trim();
 
@@ -259,11 +272,75 @@ newsletterForm.addEventListener("submit", function (event) {
 });
 
 
+/* ---------- 6b. Contact message form (Contact page) ---------- */
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  const msgName = document.getElementById("msgName");
+  const msgEmail = document.getElementById("msgEmail");
+  const msgBody = document.getElementById("msgBody");
+  const contactMessage = document.getElementById("contactMessage");
+
+  [msgName, msgEmail, msgBody].forEach(function (input) {
+    input.addEventListener("input", function () {
+      input.setCustomValidity("");
+    });
+  });
+
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const isValid = [
+      applyValidation(msgName, validateName(msgName.value)),
+      applyValidation(msgEmail, isValidEmail(msgEmail.value.trim()) ? "" : "Please enter a valid email address (e.g. name@email.com)."),
+      applyValidation(msgBody, msgBody.value.trim().length >= 10 ? "" : "Please write a message of at least 10 characters.")
+    ].every(Boolean);
+
+    if (!isValid) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    contactMessage.textContent = `Thanks, ${msgName.value.trim()}! Your message has been sent. We will reply to ${msgEmail.value.trim()} soon.`;
+    contactForm.reset();
+  });
+}
+
+
+/* ---------- 6c. Gallery filter (Gallery page) ---------- */
+const filterButtons = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".works-grid li[data-style]");
+
+function applyFilter(style) {
+  filterButtons.forEach(function (button) {
+    button.setAttribute("aria-pressed", String(button.dataset.filter === style));
+  });
+  galleryItems.forEach(function (item) {
+    item.hidden = style !== "all" && item.dataset.style !== style;
+  });
+}
+
+filterButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    applyFilter(button.dataset.filter);
+    history.replaceState(null, "", button.dataset.filter === "all" ? location.pathname : "#" + button.dataset.filter);
+  });
+});
+
+// links like gallery.html#realism open the page already filtered
+if (filterButtons.length) {
+  const hashStyle = location.hash.slice(1);
+  const known = Array.from(filterButtons).some(function (button) { return button.dataset.filter === hashStyle; });
+  applyFilter(known ? hashStyle : "all");
+}
+
+
 /* ---------- 7. Smooth scroll reveal for sections ---------- */
 const revealTargets = document.querySelectorAll(
   ".section-title, .features article, .artist, .works-grid li, .center-note, " +
   ".studio-tiles article, .reviews blockquote, .steps li, .contact-grid > *, " +
-  ".mission > div, .faq-tabs, .faq-panel"
+  ".mission > div, .faq-tabs, .faq-panel, .page-hero > *, .style-card, .two-col > *, " +
+  ".stats li, .service-grid article, .type-grid article, .cta-band > div, .filter-bar"
 );
 
 const revealObserver = new IntersectionObserver(function (entries) {

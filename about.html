@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Learn about INK SHARP: our story, our mission, the studio and the artists behind every custom tattoo.">
+  <meta name="keywords" content="tattoo studio, custom tattoo, realism, traditional, fine line, tattoo appointment">
+  <meta name="author" content="INK SHARP Team">
+  <meta name="theme-color" content="#000000">
+  <title>About Us — INK SHARP Tattoo Studio</title>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <a href="index.html" class="logo" title="INK SHARP — home"><span>INK</span><span>SHARP</span></a>
+
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">☰</button>
+
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" class="btn btn-outline btn-small" data-open-quote>Schedule an Appointment</button>
+  </header>
+
+  <main>
+
+    <section class="page-hero bg-hero-realism" aria-label="About Us">
+      <p class="eyebrow">About Us</p>
+      <h1>The People Behind the Ink</h1>
+      <p>INK SHARP is a small, artist-run tattoo studio built on custom work, honest advice and a clean, calm space.</p>
+    </section>
+
+    <!-- STORY -->
+    <section class="section" id="story">
+      <h2 class="section-title">Our Story</h2>
+      <div class="two-col">
+        <p>INK SHARP started with three artists who shared a simple idea: every tattoo should be drawn for the person wearing it. Instead of picking flash off a wall, our clients sit down with an artist, talk through the meaning behind the piece and leave with a design that belongs to them alone.</p>
+        <p>Each of us came up through a different style — realism, traditional and fine line — and the studio grew around that mix. Today we work side by side, trade ideas and hold every piece to the same standard: clean lines, smooth shading and a tattoo that still looks sharp years after it heals.</p>
+      </div>
+      <ul class="stats">
+        <li><strong>3</strong><span>Resident artists</span></li>
+        <li><strong>3</strong><span>Signature styles</span></li>
+        <li><strong>100%</strong><span>Custom designs</span></li>
+        <li><strong>7</strong><span>Days open a week</span></li>
+      </ul>
+    </section>
+
+    <!-- MISSION -->
+    <section class="section section-alt mission" id="mission">
+      <h2 class="section-title">Our Mission</h2>
+      <div>
+        <p>We are driven by a steady pursuit of craft. Our promise is to make custom tattoos that are original, detailed and meaningful, and to treat every client with care from the first sketch to the final healed result.</p>
+        <a href="services.html" class="btn btn-outline">See Our Services</a>
+      </div>
+    </section>
+
+    <!-- ARTISTS -->
+    <section class="section" id="artists">
+      <h2 class="section-title">Our Artists</h2>
+      <div class="artists">
+        <article class="artist">
+          <img src="assets/img/profile-lorman.jpg" alt="Portrait of Lorman" width="720" height="720" loading="lazy">
+          <h3><button type="button" class="artist-toggle" aria-expanded="false" aria-controls="info-lorman">Lorman</button></h3>
+          <div class="artist-info" id="info-lorman">
+            <div>
+              <p class="specialty">Realism &amp; Black and Grey</p>
+              <p>A master of contrast and depth. Lorman turns photo references into smooth, photo-real portraits and wildlife pieces that stay sharp for years.</p>
+            </div>
+          </div>
+        </article>
+        <article class="artist">
+          <img src="assets/img/profile-diether.jpg" alt="Portrait of Diether" width="720" height="720" loading="lazy">
+          <h3><button type="button" class="artist-toggle" aria-expanded="false" aria-controls="info-diether">Diether</button></h3>
+          <div class="artist-info" id="info-diether">
+            <div>
+              <p class="specialty">Traditional &amp; Bold Linework</p>
+              <p>Diether brings classic tattoo tradition into the modern era with heavy outlines and rich saturation, built for maximum longevity.</p>
+            </div>
+          </div>
+        </article>
+        <article class="artist">
+          <img src="assets/img/profile-john.jpg" alt="Portrait of John" width="720" height="720" loading="lazy">
+          <h3><button type="button" class="artist-toggle" aria-expanded="false" aria-controls="info-john">John</button></h3>
+          <div class="artist-info" id="info-john">
+            <div>
+              <p class="specialty">Fine Line &amp; Botanical</p>
+              <p>Delicate precision and organic elegance. John works in single-needle fine lines, botanical illustration and subtle geometric concepts.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- THE STUDIO -->
+    <section class="section section-alt" id="studio">
+      <h2 class="section-title">The Studio</h2>
+      <div class="studio-tiles">
+        <article><h3>Sterile &amp; Licensed</h3><p>Single-use needles, hospital-grade sterilization and a health-permit certified space.</p></article>
+        <article><h3>Calm &amp; Minimal</h3><p>A quiet, uncluttered studio built so you can relax while the artist focuses.</p></article>
+        <article><h3>Aftercare Support</h3><p>Message us any time during healing. We will help you keep the tattoo looking its best.</p></article>
+      </div>
+    </section>
+
+    <section class="section cta-band" id="cta">
+      <h2 class="section-title">Work With Our Artists</h2>
+      <div>
+        <p>Pick the artist whose style speaks to you and tell us about your idea.</p>
+        <div class="cta-actions">
+          <button type="button" class="btn btn-solid" data-open-quote>Schedule an Appointment</button>
+          <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-cols">
+      <div>
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <ul>
+          <li>Studio Address Line 1, City, Philippines</li>
+          <li><a href="tel:+639000000000">(+63) 900 000 0000</a></li>
+          <li><a href="mailto:hello@inksharp.example">hello@inksharp.example</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow us on</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/ink_sharp_?exln=amYwMzRocTRlYjln" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61596155020380" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2026 INK SHARP Tattoo Studio.</p>
+  </footer>
+
+  <!-- MOBILE: fixed appointment bar (shown on phones only) -->
+  <div class="mobile-cta">
+    <button type="button" class="btn btn-solid" data-open-quote>Schedule an Appointment</button>
+  </div>
+
+  <!-- SCHEDULE AN APPOINTMENT DIALOG -->
+  <dialog class="dialog" id="quoteDialog" aria-labelledby="quoteTitle">
+    <h2 id="quoteTitle">Schedule an Appointment</h2>
+    <form id="bookingForm" name="bookingForm" action="#" method="post" autocomplete="on">
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="fullName" placeholder="Your name" minlength="2" maxlength="60" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="contact-input">Phone or email</label>
+        <input type="text" id="contact-input" name="contact" placeholder="Phone or email" maxlength="60" required>
+      </div>
+      <div class="field">
+        <label for="tattoo-type">Tattoo Type</label>
+        <select id="tattoo-type" name="tattooType" aria-describedby="price-note" required>
+          <optgroup label="Shop minimum: Small Piece / Minimalist (1-3 inches)">
+            <option value="Small - Black and Gray">Black and Gray</option>
+            <option value="Small - Colored">Colored</option>
+          </optgroup>
+          <optgroup label="Medium piece">
+            <option value="Medium - Black and Gray Simple Design">Black and Gray Simple Design</option>
+            <option value="Medium - Simple Colored Simple Design">Simple Colored Simple Design</option>
+            <option value="Medium - Black and Gray Advanced Design">Black and Gray Advanced Design</option>
+            <option value="Medium - Colored Advanced Design">Colored Advanced Design</option>
+          </optgroup>
+          <option value="Large Piece">Large Piece</option>
+        </select>
+        <p class="field-note" id="price-note">Note: Prices may change depends on the requested/chosen designs</p>
+      </div>
+      <div class="field">
+        <label for="idea">Idea description</label>
+        <textarea id="idea" name="ideaDescription" placeholder="Describe your placement, size and idea..." maxlength="500"></textarea>
+      </div>
+      <div class="field">
+        <label for="artist">Preferred artist</label>
+        <select id="artist" name="preferredArtist" required>
+          <option value="Diether">Diether</option>
+          <option value="Lorman">Lorman</option>
+          <option value="John">John</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="date">Preferred date</label>
+        <input type="date" id="date" name="preferredDate" required>
+      </div>
+      <div class="dialog-actions">
+        <button type="submit" class="btn btn-solid">Request Appointment</button>
+        <button type="button" class="btn btn-outline" id="quoteCancel">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- PHOTO VIEWER (zoom) -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button type="button" class="lb-close" id="lbClose" aria-label="Close photo">✕</button>
+    <button type="button" class="lb-nav" id="lbPrev" aria-label="Previous photo">‹</button>
+    <figure>
+      <img id="lbImage" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button type="button" class="lb-nav" id="lbNext" aria-label="Next photo">›</button>
+  </dialog>
+
+</body>
+</html>
