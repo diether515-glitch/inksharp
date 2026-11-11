@@ -272,41 +272,6 @@ if (newsletterForm) newsletterForm.addEventListener("submit", function (event) {
 });
 
 
-/* ---------- 6b. Contact message form (Contact page) ---------- */
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-  const msgName = document.getElementById("msgName");
-  const msgEmail = document.getElementById("msgEmail");
-  const msgBody = document.getElementById("msgBody");
-  const contactMessage = document.getElementById("contactMessage");
-
-  [msgName, msgEmail, msgBody].forEach(function (input) {
-    input.addEventListener("input", function () {
-      input.setCustomValidity("");
-    });
-  });
-
-  contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const isValid = [
-      applyValidation(msgName, validateName(msgName.value)),
-      applyValidation(msgEmail, isValidEmail(msgEmail.value.trim()) ? "" : "Please enter a valid email address (e.g. name@email.com)."),
-      applyValidation(msgBody, msgBody.value.trim().length >= 10 ? "" : "Please write a message of at least 10 characters.")
-    ].every(Boolean);
-
-    if (!isValid) {
-      contactForm.reportValidity();
-      return;
-    }
-
-    contactMessage.textContent = `Thanks, ${msgName.value.trim()}! Your message has been sent. We will reply to ${msgEmail.value.trim()} soon.`;
-    contactForm.reset();
-  });
-}
-
-
 /* ---------- 6c. Gallery filter (Gallery page) ---------- */
 const filterButtons = document.querySelectorAll(".filter-btn");
 const galleryItems = document.querySelectorAll(".works-grid li[data-style]");

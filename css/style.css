@@ -629,7 +629,8 @@ body.menu-open { overflow: hidden; }
 address h3, .contact-form h3 { margin-bottom: 8px; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grey); }
 .contact-form h3 { font-size: 1.5rem; font-weight: 300; letter-spacing: 0; text-transform: none; color: var(--white); margin-bottom: 20px; }
 .social-block p { color: #ddd; margin-bottom: 20px; }
-.qr { width: 100%; max-width: 440px; margin-bottom: 20px; background: #fff; }
+/* QR: inverted to light modules on the page colour; "screen" drops the black so it sits directly on the background */
+.qr { width: 100%; max-width: 440px; margin-bottom: 20px; filter: invert(1) contrast(1.2); mix-blend-mode: screen; }
 .social-links { display: flex; flex-wrap: wrap; gap: 12px; }
 
 #story    { --bg-image: url("../assets/img/realism-1.jpg"); }
