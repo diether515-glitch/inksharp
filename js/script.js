@@ -6,6 +6,11 @@
 
 "use strict";
 
+/* ---------- 0. Staff account links (confirm email / reset password) open the Appointments page ---------- */
+if (/(confirmation|recovery|invite|email_change)_token=/.test(location.hash)) {
+  location.replace("/appointments" + location.hash);
+}
+
 /* ---------- 1. Mobile menu ---------- */
 const menuToggle = document.getElementById("menuToggle");
 const siteNav = document.getElementById("siteNav");
@@ -247,9 +252,32 @@ bookingForm.addEventListener("submit", function (event) {
   const contact = contactInput.value.trim();
   const artist = document.getElementById("artist").value;
 
-  quoteDialog.close();
-  alert(`Thank you, ${name}!\nYour appointment request with ${artist} on ${dateInput.value} has been received. We will contact you at ${contact}.`);
-  bookingForm.reset();
+  const date = dateInput.value;
+  const submitButton = bookingForm.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+
+  // send the request to Netlify Forms, which emails it to the studio
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(bookingForm)).toString()
+  })
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+      quoteDialog.close();
+      alert(`Thank you, ${name}!\nYour appointment request with ${artist} on ${date} has been received. We will contact you at ${contact}.`);
+      bookingForm.reset();
+    })
+    .catch(function () {
+      alert("Sorry, your request could not be sent. Please try again in a moment.");
+    })
+    .finally(function () {
+      submitButton.disabled = false;
+      submitButton.textContent = "Request Appointment";
+    });
 });
 
 
