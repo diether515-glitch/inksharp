@@ -1,5 +1,5 @@
 // Runs automatically every time a Netlify Form submission is verified.
-// 1. Saves a copy of each appointment request in the database (shown on /appointments).
+// 1. Saves a copy of each appointment request in the database.
 // 2. Emails it to the three INK SHARP artists.
 import nodemailer from "nodemailer";
 import { db } from "../../db/index.js";

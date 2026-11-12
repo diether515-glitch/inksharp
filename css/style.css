@@ -676,5 +676,3 @@ address h3, .contact-form h3 { margin-bottom: 8px; font-size: 0.72rem; letter-sp
   white-space: nowrap;
   left: -9999px;
 }
-.staff-link { margin-left: 10px; text-decoration: underline; text-underline-offset: 3px; opacity: 0.6; }
-.staff-link:hover { opacity: 1; }
