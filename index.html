@@ -158,7 +158,7 @@
         </ul>
       </div>
     </div>
-    <p class="copyright">© 2026 INK SHARP Tattoo Studio.</p>
+    <p class="copyright">© 2026 INK SHARP Tattoo Studio. <a href="appointments.html" class="staff-link">Staff</a></p>
   </footer>
 
   <!-- MOBILE: fixed appointment bar (shown on phones only) -->
@@ -169,7 +169,10 @@
   <!-- SCHEDULE AN APPOINTMENT DIALOG -->
   <dialog class="dialog" id="quoteDialog" aria-labelledby="quoteTitle">
     <h2 id="quoteTitle">Schedule an Appointment</h2>
-    <form id="bookingForm" name="bookingForm" action="#" method="post" autocomplete="on">
+    <form id="bookingForm" name="bookingForm" action="/" method="post" autocomplete="on" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="bookingForm">
+      <input type="hidden" name="subject" value="New appointment request - INK SHARP">
+      <p class="visually-hidden" aria-hidden="true"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <div class="field">
         <label for="name">Full name</label>
         <input type="text" id="name" name="fullName" placeholder="Your name" minlength="2" maxlength="60" autocomplete="name" required>
