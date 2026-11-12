@@ -6,11 +6,6 @@
 
 "use strict";
 
-/* ---------- 0. Staff account links (confirm email / reset password) open the Appointments page ---------- */
-if (/(confirmation|recovery|invite|email_change)_token=/.test(location.hash)) {
-  location.replace("/appointments" + location.hash);
-}
-
 /* ---------- 1. Mobile menu ---------- */
 const menuToggle = document.getElementById("menuToggle");
 const siteNav = document.getElementById("siteNav");
